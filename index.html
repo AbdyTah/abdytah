@@ -157,10 +157,28 @@
                 <a href="#poster" class="hover:text-brand-amber transition-colors">Poster</a>
             </nav>
 
-            <a href="mailto:abdytah3@gmail.com?subject=Design%20Project%20Inquiry" class="bg-brand-amber hover:bg-amber-400 text-brand-black font-bold text-xs px-5 py-2 rounded-full transition-all transform hover:scale-105">
-                Hire Me
-            </a>
+            <div class="flex items-center gap-3">
+                <a href="mailto:abdytah3@gmail.com?subject=Design%20Project%20Inquiry" class="bg-brand-amber hover:bg-amber-400 text-brand-black font-bold text-xs px-5 py-2 rounded-full transition-all transform hover:scale-105">
+                    Hire Me
+                </a>
+                <button type="button" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+                        class="md:hidden w-10 h-10 rounded-full border border-brand-border hover:border-brand-amber text-brand-white flex items-center justify-center transition-colors">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
         </div>
+
+        <!-- Mobile menu -->
+        <nav id="mobile-menu" class="hidden md:hidden absolute top-16 inset-x-0 bg-brand-black/95 backdrop-blur-xl border-b border-brand-border">
+            <div class="max-w-6xl mx-auto px-5 py-3 flex flex-col font-mono text-xs uppercase tracking-widest text-brand-muted">
+                <a href="#about" class="py-3 hover:text-brand-amber transition-colors">About</a>
+                <a href="#services" class="py-3 hover:text-brand-amber transition-colors">Services</a>
+                <a href="#youtube" class="py-3 hover:text-brand-amber transition-colors">Thumbnails</a>
+                <a href="#social" class="py-3 hover:text-brand-amber transition-colors">Social Posts</a>
+                <a href="#poster" class="py-3 hover:text-brand-amber transition-colors">Poster</a>
+                <a href="#contact" class="py-3 hover:text-brand-amber transition-colors">Contact</a>
+            </div>
+        </nav>
     </header>
 
     <!-- HERO: Poster-Style Cover -->
@@ -713,6 +731,17 @@
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         }
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        function setMenu(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            menuBtn.setAttribute('aria-expanded', String(open));
+            menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        }
+        menuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+        window.addEventListener('resize', () => { if (window.innerWidth >= 768) setMenu(false); });
 
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
