@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="google-adsense-account" content="ca-pub-3887881536679109">
+    <meta name="google-site-verification" content="FSz40TRqoEOyUbjs7nVOD8YgJThcPZ3wwXHseRgunNw" />
+    <title>Abdy Tah — Visual Designer | Portfolio 2026</title>
+    <meta name="description" content="Visual Designer in Ethiopia. High-CTR YouTube thumbnails, cohesive social media campaigns, and launch posters built to convert.">
+    <meta property="og:title" content="Abdy Tah — Visual Designer">
+    <meta property="og:description" content="High-CTR YouTube thumbnails, cohesive social media campaigns, and launch posters built to convert.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/d/1CAvpv80lpDDGeuJ0kyAN_Dvt74J-nCtt=w1200">
+    <meta property="og:url" content="https://abdytah.vercel.app">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://lh3.googleusercontent.com/d/1CAvpv80lpDDGeuJ0kyAN_Dvt74J-nCtt=w1200">
+    <meta name="twitter:title" content="Abdy Tah — Visual Designer">
+    <meta name="twitter:description" content="High-CTR YouTube thumbnails, cohesive social media campaigns, and launch posters built to convert.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#050505',
+                            surface: '#111113',
+                            border: '#222226',
+                            white: '#FFFFFF',
+                            muted: '#A1A1AA',
+                            amber: '#F59E0B',
+                            amberDark: '#D97706'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+                        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+                        script: ['Alex Brush', 'cursive'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            padding-top: env(safe-area-inset-top, 0);
+            padding-bottom: env(safe-area-inset-bottom, 0);
+        }
+        .text-amber-gradient {
+            background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 48%, #D97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-outline-amber {
+            color: transparent;
+            -webkit-text-stroke: 1.5px #F59E0B;
+        }
+        .corner-glow-tl {
+            background: radial-gradient(circle at 0% 0%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0.05) 35%, transparent 65%);
+        }
+        .corner-glow-br {
+            background: radial-gradient(circle at 100% 100%, rgba(245, 158, 11, 0.20) 0%, rgba(245, 158, 11, 0.04) 35%, transparent 65%);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .card-hover {
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px -15px rgba(245, 158, 11, 0.18);
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-brand-white font-sans antialiased selection:bg-brand-amber selection:text-brand-black overflow-x-hidden">
+
+    <!-- Minimal Top Nav -->
+    <header class="fixed top-0 inset-x-0 z-50 bg-brand-black/85 backdrop-blur-xl border-b border-brand-border">
+        <div class="max-w-6xl mx-auto px-5 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <span class="font-display font-bold text-base tracking-[0.22em] text-brand-white uppercase group-hover:text-brand-amber transition-colors">ABDY TAH</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-brand-muted">
+                <a href="#about" class="hover:text-brand-amber transition-colors">About</a>
+                <a href="#youtube" class="hover:text-brand-amber transition-colors">Thumbnails</a>
+                <a href="#social" class="hover:text-brand-amber transition-colors">Social Posts</a>
+                <a href="#poster" class="hover:text-brand-amber transition-colors">Poster</a>
+            </nav>
+
+            <a href="mailto:abdytah3@gmail.com?subject=Design%20Project%20Inquiry" class="bg-brand-amber hover:bg-amber-400 text-brand-black font-bold text-xs px-5 py-2 rounded-full transition-all transform hover:scale-105">
+                Hire Me
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO: Poster-Style Cover -->
+    <section class="relative pt-28 pb-20 sm:pt-36 sm:pb-28 corner-glow-tl border-b border-brand-border overflow-hidden">
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[300px] bg-brand-amber/12 blur-[130px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-5 sm:px-6 text-center relative z-10">
+            <p class="font-mono text-xs sm:text-sm tracking-[0.45em] text-brand-muted uppercase mb-3">
+                ABDY TAH
+            </p>
+
+            <h1 class="font-display font-bold text-5xl sm:text-7xl md:text-[104px] tracking-tight leading-none text-amber-gradient select-none">
+                PORTFOLIO
+            </h1>
+
+            <div class="flex items-center justify-center gap-4 sm:gap-6 max-w-xl mx-auto my-5">
+                <span class="h-[1.5px] flex-1 bg-gradient-to-r from-transparent to-brand-white/80"></span>
+                <span class="font-sans font-medium text-sm sm:text-lg tracking-[0.18em] text-brand-white uppercase">
+                    Visual Designer
+                </span>
+                <span class="h-[1.5px] flex-1 bg-gradient-to-l from-transparent to-brand-white/80"></span>
+            </div>
+
+            <div class="relative inline-flex items-center justify-center mt-2 select-none">
+                <span class="font-display font-bold text-7xl sm:text-8xl md:text-[132px] tracking-[0.08em] leading-none text-outline-amber opacity-90">
+                    2026
+                </span>
+                <svg viewBox="0 0 560 36" fill="none" class="w-[108%] max-w-[540px] h-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_12px_20px_rgba(0,0,0,0.95)]">
+                    <polygon points="8,18 42,10 42,26" fill="#27272A"/>
+                    <polygon points="2,18 14,15 14,21" fill="#09090B"/>
+                    <rect x="42" y="9" width="7" height="18" rx="1" fill="#E4E4E7"/>
+                    <rect x="49" y="8" width="465" height="20" rx="10" fill="url(#penGrad)"/>
+                    <rect x="155" y="13" width="68" height="10" rx="4" fill="#09090B" stroke="#52525B" stroke-width="1"/>
+                    <rect x="163" y="15" width="18" height="6" rx="2" fill="#A1A1AA"/>
+                    <rect x="514" y="10" width="22" height="16" rx="6" fill="#3F3F46"/>
+                    <defs>
+                        <linearGradient id="penGrad" x1="49" y1="8" x2="49" y2="28" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#71717A"/>
+                            <stop offset="45%" stop-color="#3F3F46"/>
+                            <stop offset="100%" stop-color="#18181B"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="reveal relative py-20 sm:py-28 border-b border-brand-border overflow-hidden">
+        <div class="max-w-5xl mx-auto px-5 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+                <div class="md:col-span-7 space-y-4">
+                    <div class="relative inline-block">
+                        <span class="font-script text-4xl sm:text-5xl text-brand-white block pl-12 sm:pl-24">
+                            About Me
+                        </span>
+                        <svg viewBox="0 0 180 75" fill="none" class="w-36 sm:w-44 h-auto -mt-2 ml-4 text-brand-white">
+                            <path d="M135 12 C125 32, 95 36, 92 22 C89 10, 108 10, 105 26 C100 46, 35 32, 16 64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M10 54 L15 66 L27 61" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                    <h2 class="font-display font-bold text-3xl sm:text-5xl tracking-tight uppercase">
+                        <span class="text-brand-white">VISUAL</span>
+                        <span class="text-outline-amber ml-2">DESIGNER</span>
+                    </h2>
+
+                    <div class="space-y-3 text-brand-muted text-base sm:text-lg max-w-md leading-relaxed">
+                        <p>
+                            Hi, I'm <span class="text-brand-amber font-semibold">Abdy Tah</span>.
+                        </p>
+                        <p>
+                            I'm a passionate visual designer creating bold, eye-catching <span class="text-brand-white font-semibold">thumbnails, social media designs, posters, and advertising campaigns</span>. I enjoy exploring new ideas, experimenting with different styles, and constantly pushing my creative skills further.
+                        </p>
+                    </div>
+
+                    <div class="pt-3 flex flex-wrap gap-3">
+                        <a href="mailto:abdytah3@gmail.com?subject=Design%20Project%20Inquiry" class="bg-brand-amber hover:bg-amber-400 text-brand-black font-bold text-xs sm:text-sm px-6 py-3 rounded-full transition-all">
+                            Email Me
+                        </a>
+                        <a href="https://wa.me/251927652240" target="_blank" rel="noopener" class="border border-brand-border hover:border-brand-amber text-brand-white text-xs sm:text-sm font-medium px-6 py-3 rounded-full transition-colors">
+                            WhatsApp Me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-5 flex justify-center md:justify-end">
+                    <div class="relative w-full max-w-[320px]">
+                        <div class="aspect-[4/5] rounded-3xl overflow-hidden bg-brand-surface border border-brand-border relative shadow-[0_0_50px_rgba(245,158,11,0.12)]">
+                            <img src="https://lh3.googleusercontent.com/d/1CAvpv80lpDDGeuJ0kyAN_Dvt74J-nCtt=w1200"
+                                 onerror="this.onerror=null; this.src='images/about-me.png';"
+                                 alt="Abdy Tah"
+                                 class="w-full h-full object-cover object-top">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <span class="font-script text-4xl sm:text-5xl text-amber-gradient absolute -bottom-4 right-3 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] select-none">
+                            Abdy Tah
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE DIVIDER BANNER -->
+    <section class="relative py-20 sm:py-24 corner-glow-tl corner-glow-br border-b border-brand-border overflow-hidden">
+        <svg viewBox="0 0 120 260" fill="none" class="hidden sm:block w-24 h-auto absolute -top-6 left-8 lg:left-24 opacity-85 pointer-events-none">
+            <g transform="rotate(24 60 130)">
+                <rect x="48" y="0" width="24" height="210" rx="10" fill="#27272A" stroke="#3F3F46"/>
+                <rect x="48" y="210" width="24" height="8" fill="#E4E4E7"/>
+                <polygon points="48,218 72,218 60,255" fill="#09090B"/>
+            </g>
+        </svg>
+
+        <div class="max-w-4xl mx-auto px-5 sm:px-6 text-center relative z-10">
+            <div class="inline-block text-left">
+                <span class="font-script text-4xl sm:text-5xl text-brand-white block -mb-3 sm:-mb-4">My</span>
+                <h2 class="font-display font-bold text-4xl sm:text-6xl md:text-7xl text-brand-white tracking-tight uppercase leading-none">
+                    PORTFOLIO
+                </h2>
+                <p class="font-display font-bold text-lg sm:text-2xl text-brand-white tracking-wider uppercase text-right mt-1">
+                    SHOWCASES
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 01: YOUTUBE THUMBNAILS -->
+    <section id="youtube" class="reveal relative py-20 sm:py-28 corner-glow-tl corner-glow-br border-b border-brand-border">
+        <div class="max-w-5xl mx-auto px-5 sm:px-6 space-y-14">
+            <div class="text-center relative space-y-2">
+                <div class="inline-flex flex-wrap items-baseline justify-center gap-2 sm:gap-3">
+                    <span class="font-script text-5xl sm:text-7xl text-brand-white">YouTube</span>
+                    <h2 class="font-display font-bold text-4xl sm:text-6xl text-brand-amber tracking-tight">
+                        Thumbnails
+                    </h2>
+                </div>
+                <p class="text-sm sm:text-base text-brand-muted">
+                    Bold visuals designed for YouTube content.
+                </p>
+            </div>
+
+            <!-- Option 2: Full-Width Final Design + Floating Picture-in-Picture Sketch Card -->
+            <div class="relative max-w-4xl mx-auto">
+                <div class="hidden sm:flex w-14 h-10 rounded-2xl bg-[#FF0000] items-center justify-center shadow-[0_10px_30px_rgba(255,0,0,0.4)] absolute -top-4 -right-4 rotate-12 z-20 pointer-events-none">
+                    <div class="w-0 h-0 border-t-[7px] border-t-transparent border-l-[12px] border-l-white border-b-[7px] border-b-transparent ml-1"></div>
+                </div>
+
+                <div class="relative aspect-video rounded-3xl overflow-hidden bg-black border border-brand-border hover:border-brand-amber shadow-[0_25px_70px_rgba(245,158,11,0.16)] transition-colors group">
+                    <!-- Main Stage Image -->
+                    <img id="yt-hero-img"
+                         src="https://lh3.googleusercontent.com/d/1zpRZytNVsMWIRiUxBUgUI04FqoF4cvgE=w1600"
+                         alt="Final YouTube Thumbnail Design"
+                         onclick="openLightboxByIndex(9)"
+                         class="w-full h-full object-cover cursor-zoom-in transition-transform duration-500 group-hover:scale-[1.01]">
+
+                    <!-- Top-Left Active Stage Badge -->
+                    <div id="yt-hero-badge" class="absolute top-3 left-3 sm:top-5 sm:left-5 bg-brand-black/85 backdrop-blur-md text-brand-amber font-mono text-[10px] sm:text-xs px-3 py-1 rounded-full border border-brand-border pointer-events-none">
+                        FINAL DESIGN • 16:9
+                    </div>
+
+                    <!-- Top-Right Zoom Button -->
+                    <button type="button"
+                            onclick="openLightboxByIndex(9)"
+                            aria-label="Zoom full resolution"
+                            class="absolute top-3 right-3 sm:top-5 sm:right-5 w-9 h-9 rounded-full bg-brand-black/80 hover:bg-brand-amber text-brand-white hover:text-brand-black border border-brand-border flex items-center justify-center transition-colors">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                    </button>
+
+                    <!-- Floating Picture-in-Picture Card (Click to Swap Sketch <-> Final) -->
+                    <button type="button"
+                            onclick="swapHeroSketch(event)"
+                            title="Click to swap Sketch and Final Design"
+                            class="group/pip absolute bottom-3 left-3 sm:bottom-5 sm:left-5 w-32 sm:w-52 aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-brand-surface border-2 border-brand-amber shadow-[0_14px_35px_rgba(0,0,0,0.9)] -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 text-left z-10">
+                        <img id="yt-pip-img"
+                             src="https://lh3.googleusercontent.com/d/1Hy5O5dSxYS-_jNjkmS6LTjdu7HFGVEta=w1600"
+                             alt="Concept Sketch"
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-x-0 bottom-0 px-2 py-1 sm:px-2.5 sm:py-1.5 bg-gradient-to-t from-black/95 via-black/75 to-transparent flex items-center justify-between">
+                            <span id="yt-pip-label" class="font-mono text-[9px] sm:text-[10px] font-semibold text-brand-amber uppercase tracking-wider">
+                                Concept Sketch
+                            </span>
+                            <i data-lucide="repeat" class="w-3 h-3 text-brand-white group-hover/pip:rotate-180 transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4-Column Thumbnail Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <article class="card-hover group bg-brand-surface rounded-2xl border border-brand-border hover:border-brand-amber overflow-hidden cursor-zoom-in flex flex-col"
+                         onclick="openLightboxByIndex(0)">
+                    <div class="aspect-video bg-black overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/d/1GkEzsv7RNm10tfJF7nnVQARFaeiTY96H=w1600"
+                             alt="Curiosity Hook Concept"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 flex-1">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="font-bold text-sm text-brand-white group-hover:text-brand-amber transition-colors">Curiosity Hook Concept</h3>
+                            <span class="font-mono text-[10px] text-brand-amber shrink-0">16:9</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-hover group bg-brand-surface rounded-2xl border border-brand-border hover:border-brand-amber overflow-hidden cursor-zoom-in flex flex-col"
+                         onclick="openLightboxByIndex(1)">
+                    <div class="aspect-video bg-black overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/d/1JB6u33lUsttVmrSy7Tf-DB-aBJqBhjrM=w1600"
+                             alt="Visual Contrast Packaging"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 flex-1">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="font-bold text-sm text-brand-white group-hover:text-brand-amber transition-colors">Visual Contrast Packaging</h3>
+                            <span class="font-mono text-[10px] text-brand-amber shrink-0">16:9</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-hover group bg-brand-surface rounded-2xl border border-brand-border hover:border-brand-amber overflow-hidden cursor-zoom-in flex flex-col"
+                         onclick="openLightboxByIndex(2)">
+                    <div class="aspect-video bg-black overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/d/1Xc1mXHrHd9ZTyEQw1-i34C6_s2beFRfV=w1600"
+                             alt="High-Contrast Story Visual"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 flex-1">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="font-bold text-sm text-brand-white group-hover:text-brand-amber transition-colors">High-Contrast Story Visual</h3>
+                            <span class="font-mono text-[10px] text-brand-amber shrink-0">16:9</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-hover group bg-brand-surface rounded-2xl border border-brand-border hover:border-brand-amber overflow-hidden cursor-zoom-in flex flex-col"
+                         onclick="openLightboxByIndex(9)">
+                    <div class="aspect-video bg-black overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/d/1zpRZytNVsMWIRiUxBUgUI04FqoF4cvgE=w1600"
+                             alt="Flagship CTR Packaging"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-4 flex-1">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="font-bold text-sm text-brand-white group-hover:text-brand-amber transition-colors">Flagship CTR Packaging</h3>
+                            <span class="font-mono text-[10px] text-brand-amber shrink-0">TOP PICK</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 02: SOCIAL MEDIA CAMPAIGN -->
+    <section id="social" class="reveal relative py-20 sm:py-28 corner-glow-tl border-b border-brand-border">
+        <div class="max-w-5xl mx-auto px-5 sm:px-6 space-y-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="font-script text-5xl sm:text-6xl text-brand-white block -mb-3">Social Media</span>
+                        <h2 class="font-display font-bold text-4xl sm:text-5xl text-brand-amber leading-[1.05] tracking-tight">
+                            Campaign
+                        </h2>
+                        <p class="text-sm sm:text-base text-brand-muted mt-3">
+                            Creative designs for digital brand promotion.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="card-hover group relative aspect-[4/5] rounded-2xl overflow-hidden bg-brand-surface border border-brand-border hover:border-brand-amber cursor-zoom-in"
+                             onclick="openLightboxByIndex(3)">
+                            <img src="https://lh3.googleusercontent.com/d/1YwW2znUQ5MyxSqwd47niQAzQ4Uj00z9y=w1200"
+                                 onerror="this.onerror=null; this.src='INFO POST.jpg';"
+                                 alt="Educational Info Post"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-x-0 bottom-0 p-2.5 bg-gradient-to-t from-brand-black via-brand-black/80 to-transparent">
+                                <p class="font-mono text-[10px] text-brand-amber">01 • AWARENESS</p>
+                                <p class="font-bold text-xs text-brand-white truncate">Educational Info Post</p>
+                            </div>
+                        </div>
+
+                        <div class="card-hover group relative aspect-[4/5] rounded-2xl overflow-hidden bg-brand-surface border border-brand-border hover:border-brand-amber cursor-zoom-in"
+                             onclick="openLightboxByIndex(5)">
+                            <img src="https://lh3.googleusercontent.com/d/1_B14dS-UEZcHUeYGlURFDhMzDMuELgm8=w1200"
+                                 onerror="this.onerror=null; this.src='Taem special offer post.jpg';"
+                                 alt="Special Offer Promo"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-x-0 bottom-0 p-2.5 bg-gradient-to-t from-brand-black via-brand-black/80 to-transparent">
+                                <p class="font-mono text-[10px] text-brand-amber">03 • CONVERSION</p>
+                                <p class="font-bold text-xs text-brand-white truncate">Special Offer Promo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="card-hover group relative aspect-[4/5] max-w-md mx-auto lg:ml-auto rounded-3xl overflow-hidden bg-brand-surface border border-brand-border hover:border-brand-amber shadow-[0_20px_60px_rgba(245,158,11,0.14)] cursor-zoom-in"
+                         onclick="openLightboxByIndex(4)">
+                        <img src="https://lh3.googleusercontent.com/d/1hxh5SjJfafXw7fa7UaxJBTyhwaLPnFrH=w1200"
+                             onerror="this.onerror=null; this.src='Taem product post.jpg';"
+                             alt="Taem Product Spotlight"
+                             class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
+                        <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-brand-black via-brand-black/75 to-transparent flex items-center justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-brand-amber">02 • CONSIDERATION</span>
+                                <h3 class="font-bold text-base text-brand-white">Taem Product Spotlight</h3>
+                            </div>
+                            <span class="w-9 h-9 rounded-full bg-brand-amber text-brand-black flex items-center justify-center">
+                                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heaven Luxury Beauty Salon: Same Asymmetric Split Style + Brand Gradient Glow (Before Idea to Design) -->
+            <div class="relative rounded-3xl p-6 sm:p-10 border border-fuchsia-500/25 overflow-hidden"
+                 style="background: radial-gradient(circle at 0% 0%, rgba(217, 70, 239, 0.24) 0%, rgba(88, 28, 135, 0.14) 45%, rgba(17, 17, 19, 0.95) 100%);">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <span class="font-script text-4xl sm:text-5xl text-brand-white block -mb-2">Heaven Luxury</span>
+                            <h3 class="font-display font-bold text-3xl sm:text-4xl leading-[1.05] tracking-tight bg-gradient-to-r from-fuchsia-300 via-fuchsia-400 to-purple-400 bg-clip-text text-transparent">
+                                Beauty Salon
+                            </h3>
+                            <p class="text-sm text-brand-muted mt-2">
+                                Weekend service menu &amp; promotional campaign.
+                            </p>
+                        </div>
+
+                        <div class="card-hover group relative aspect-[4/5] max-w-xs rounded-2xl overflow-hidden bg-brand-surface border border-fuchsia-500/30 hover:border-fuchsia-400 cursor-zoom-in shadow-[0_15px_40px_rgba(217,70,239,0.18)]"
+                             onclick="openLightboxByIndex(10)">
+                            <img src="https://lh3.googleusercontent.com/d/1yLlP_wmSQXtblbjHDa21l6HP0DJrDY99=w1200"
+                                 alt="Heaven Luxury Beauty Salon — Our Services Post"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-brand-black via-brand-black/80 to-transparent">
+                                <p class="font-mono text-[10px] text-fuchsia-400">01 • SERVICES MENU</p>
+                                <p class="font-bold text-xs text-brand-white truncate">Heaven — Our Services</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <div class="card-hover group relative aspect-[4/5] max-w-md mx-auto lg:ml-auto rounded-3xl overflow-hidden bg-brand-surface border border-fuchsia-500/35 hover:border-fuchsia-400 shadow-[0_20px_60px_rgba(217,70,239,0.22)] cursor-zoom-in"
+                             onclick="openLightboxByIndex(11)">
+                            <img src="https://lh3.googleusercontent.com/d/1iirk1btSeQkFH4YalalaWfxwGK7A22ER=w1200"
+                                 alt="Heaven Luxury Beauty Salon — 20% Off Weekend Promo"
+                                 class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
+                            <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-brand-black via-brand-black/75 to-transparent flex items-center justify-between">
+                                <div>
+                                    <span class="font-mono text-xs text-fuchsia-400">02 • WEEKEND PROMO</span>
+                                    <h4 class="font-bold text-base text-brand-white">Heaven — 20% Off Offer</h4>
+                                </div>
+                                <span class="w-9 h-9 rounded-full bg-fuchsia-500 text-brand-white flex items-center justify-center">
+                                    <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Idea to Design: Sketch -> Final 3-Panel Grid Breakdown -->
+            <div class="pt-4 space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                    <div>
+                        <span class="font-script text-4xl text-brand-white block -mb-2">Idea to</span>
+                        <h3 class="font-display font-bold text-2xl sm:text-3xl text-brand-amber tracking-tight">
+                            Final Design
+                        </h3>
+                    </div>
+                    <span class="font-mono text-[11px] text-brand-muted uppercase tracking-wider">
+                        Paper Wireframe → 3-Post Seamless Grid
+                    </span>
+                </div>
+
+                <div class="card-hover group relative rounded-3xl overflow-hidden bg-brand-surface border border-brand-border hover:border-brand-amber cursor-zoom-in shadow-[0_20px_60px_rgba(245,158,11,0.12)]"
+                     onclick="openLightboxByIndex(6)">
+                    <img src="https://lh3.googleusercontent.com/d/1tJwDdBrY0WBGKOFE0X4lI8l27JQhpwCH=w1600"
+                         alt="Idea to Design — Pencil Sketch to Taem Bakery 3-Panel Grid"
+                         class="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-500">
+                    <div class="absolute top-3 left-3 sm:top-4 sm:left-4 bg-brand-black/85 backdrop-blur-md text-brand-amber font-mono text-[10px] sm:text-xs px-3 py-1 rounded-full border border-brand-border">
+                        SKETCH → FINAL EXECUTION
+                    </div>
+                    <span class="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-9 h-9 rounded-full bg-brand-amber text-brand-black flex items-center justify-center shadow-lg">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Simple Testimonial Section -->
+            <div class="pt-4 space-y-4">
+                <h3 class="font-display font-bold text-2xl sm:text-3xl text-brand-amber tracking-tight text-center">
+                    Testimonial
+                </h3>
+
+                <div class="max-w-md mx-auto">
+                    <div class="card-hover group relative rounded-2xl overflow-hidden bg-brand-surface border border-brand-border hover:border-brand-amber cursor-zoom-in shadow-xl"
+                         onclick="openLightboxByIndex(8)">
+                        <img src="https://lh3.googleusercontent.com/d/1VWI-PTFB_7fzosS9NQoLutKdC6ggHKgy=w1200"
+                             alt="Testimonial"
+                             class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 03: LAUNCH POSTER -->
+    <section id="poster" class="reveal relative py-20 sm:py-28 corner-glow-br border-b border-brand-border">
+        <div class="max-w-5xl mx-auto px-5 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-6">
+                    <div class="card-hover group relative aspect-[4/5] max-w-md mx-auto rounded-3xl overflow-hidden bg-brand-surface border border-brand-border hover:border-brand-amber shadow-[0_20px_60px_rgba(245,158,11,0.14)] cursor-zoom-in"
+                         onclick="openLightboxByIndex(7)">
+                        <img src="https://lh3.googleusercontent.com/d/16xetqjkj_ye-JscC5URr4ectfg5D5qd3=w1400"
+                             onerror="this.onerror=null; this.src='Bole buna.jpg';"
+                             alt="Bole Buna Grand Opening Poster"
+                             class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-brand-black/85 backdrop-blur-md text-brand-amber font-mono text-xs px-3 py-1 rounded-full border border-brand-border">
+                            CLIENT: BOLE BUNA
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-5">
+                    <div>
+                        <span class="font-script text-5xl sm:text-6xl text-brand-white block -mb-3">Launch</span>
+                        <h2 class="font-display font-bold text-4xl sm:text-5xl text-brand-amber tracking-tight">
+                            Poster
+                        </h2>
+                        <p class="text-sm sm:text-base text-brand-muted mt-3">
+                            A promotional poster designed to introduce a product.
+                        </p>
+                    </div>
+
+                    <div class="pt-2 flex flex-wrap gap-3">
+                        <a href="mailto:abdytah3@gmail.com?subject=Launch%20Poster%20Inquiry"
+                           class="bg-brand-amber hover:bg-amber-400 text-brand-black font-bold text-sm px-7 py-3.5 rounded-full transition-all inline-flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            Order via Gmail
+                        </a>
+                        <a href="https://wa.me/251927652240?text=Hi%20Abdy%20Tah%2C%20I%20want%20a%20launch%20poster%20for%20my%20business." target="_blank" rel="noopener"
+                           class="border border-brand-border hover:border-brand-amber text-brand-white font-medium text-sm px-6 py-3.5 rounded-full transition-all inline-flex items-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-brand-amber"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER -->
+    <footer id="contact" class="relative py-20 corner-glow-tl">
+        <div class="max-w-5xl mx-auto px-5 sm:px-6 space-y-12">
+            <div class="text-center space-y-4">
+                <h2 class="font-display font-bold text-4xl sm:text-6xl text-brand-amber tracking-tight">
+                    Have a Project in Mind?
+                </h2>
+                <p class="text-brand-muted text-sm sm:text-base">
+                    Best reached via Gmail—or message directly on WhatsApp.
+                </p>
+                <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+                    <a href="mailto:abdytah3@gmail.com?subject=Design%20Project%20Inquiry"
+                       class="bg-brand-amber hover:bg-amber-400 text-brand-black font-bold text-sm px-7 py-3.5 rounded-full transition-all inline-flex items-center gap-2">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        Email via Gmail
+                    </a>
+                    <a href="https://wa.me/251927652240" target="_blank" rel="noopener"
+                       class="bg-brand-surface hover:border-brand-amber text-brand-white border border-brand-border font-medium text-sm px-7 py-3.5 rounded-full transition-all inline-flex items-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-brand-amber"></i>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Primary & Direct Contact Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <a href="mailto:abdytah3@gmail.com?subject=Design%20Project%20Inquiry" class="card-hover p-4 rounded-2xl bg-brand-surface border border-brand-amber/60 hover:border-brand-amber flex items-center gap-3.5">
+                    <i data-lucide="mail" class="w-5 h-5 text-brand-amber shrink-0"></i>
+                    <div>
+                        <span class="font-mono text-[10px] text-brand-amber uppercase block">Primary • Gmail</span>
+                        <span class="font-mono text-sm text-brand-white">abdytah3@gmail.com</span>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/251927652240" target="_blank" rel="noopener" class="card-hover p-4 rounded-2xl bg-brand-surface border border-brand-border hover:border-brand-amber flex items-center gap-3.5">
+                    <i data-lucide="phone" class="w-5 h-5 text-brand-amber shrink-0"></i>
+                    <div>
+                        <span class="font-mono text-[10px] text-brand-muted uppercase block">WhatsApp</span>
+                        <span class="font-mono text-sm text-brand-white">+251 927 652 240</span>
+                    </div>
+                </a>
+
+                <a href="https://t.me/ab_di_yah" target="_blank" rel="noopener" class="card-hover p-4 rounded-2xl bg-brand-surface border border-brand-border hover:border-brand-amber flex items-center gap-3.5">
+                    <i data-lucide="send" class="w-5 h-5 text-brand-amber shrink-0"></i>
+                    <div>
+                        <span class="font-mono text-[10px] text-brand-muted uppercase block">Telegram</span>
+                        <span class="font-mono text-sm text-brand-white">@ab_di_yah</span>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/abdy.tah" target="_blank" rel="noopener" class="card-hover p-4 rounded-2xl bg-brand-surface border border-brand-border hover:border-brand-amber flex items-center gap-3.5">
+                    <i data-lucide="instagram" class="w-5 h-5 text-brand-amber shrink-0"></i>
+                    <div>
+                        <span class="font-mono text-[10px] text-brand-muted uppercase block">Instagram</span>
+                        <span class="font-mono text-sm text-brand-white">@abdy.tah</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="pt-8 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-brand-muted">
+                <span>&copy; 2026 ABDY TAH</span>
+                <div class="flex items-center gap-5">
+                    <a href="https://www.tiktok.com/@Ab_di_yah" target="_blank" rel="noopener" class="hover:text-brand-amber transition-colors">TIKTOK</a>
+                    <a href="https://www.instagram.com/abdy.tah" target="_blank" rel="noopener" class="hover:text-brand-amber transition-colors">INSTAGRAM</a>
+                    <a href="https://t.me/ab_di_yah" target="_blank" rel="noopener" class="hover:text-brand-amber transition-colors">TELEGRAM</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Full-Screen Lightbox Viewer -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-brand-black/95 backdrop-blur-xl hidden items-center justify-center p-4 sm:p-8" onclick="if(event.target === this) closeLightbox()">
+        <button onclick="closeLightbox()" aria-label="Close preview" class="absolute top-6 right-6 w-11 h-11 rounded-full bg-brand-surface hover:bg-brand-amber text-brand-white hover:text-brand-black border border-brand-border flex items-center justify-center transition-colors z-20">
+            <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+
+        <button onclick="navigateLightbox(-1)" aria-label="Previous image" class="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-brand-surface/90 hover:bg-brand-amber text-brand-white hover:text-brand-black border border-brand-border flex items-center justify-center transition-colors z-20">
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+
+        <button onclick="navigateLightbox(1)" aria-label="Next image" class="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-brand-surface/90 hover:bg-brand-amber text-brand-white hover:text-brand-black border border-brand-border flex items-center justify-center transition-colors z-20">
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+
+        <div class="max-w-5xl w-full flex flex-col items-center space-y-4">
+            <img id="lightbox-img" src="" alt="Full resolution preview" class="max-h-[78vh] w-auto object-contain rounded-2xl border border-brand-border shadow-2xl">
+            <div class="text-center">
+                <p id="lightbox-title" class="font-bold text-brand-white text-base"></p>
+                <p id="lightbox-meta" class="font-mono text-xs text-brand-amber mt-0.5"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        const portfolioItems = [
+            {
+                src: 'https://lh3.googleusercontent.com/d/1GkEzsv7RNm10tfJF7nnVQARFaeiTY96H=w1600',
+                fallback: 'https://lh3.googleusercontent.com/d/1GkEzsv7RNm10tfJF7nnVQARFaeiTY96H=w1200',
+                title: 'Curiosity Hook Concept (16:9)',
+                meta: '01 / 12 • YouTube Thumbnail'
+            },
+            {
+                src: 'https://lh3.googleusercontent.com/d/1JB6u33lUsttVmrSy7Tf-DB-aBJqBhjrM=w1600',
+                fallback: 'https://lh3.googleusercontent.com/d/1JB6u33lUsttVmrSy7Tf-DB-aBJqBhjrM=w1200',
+                title: 'Visual Contrast Packaging (16:9)',
+                meta: '02 / 12 • YouTube Thumbnail'
+            },
+            {
+                src: 'https://lh3.googleusercontent.com/d/1Xc1mXHrHd9ZTyEQw1-i34C6_s2beFRfV=w1600',
+                fallback: 'https://lh3.googleusercontent.com/d/1Xc1mXHrHd9ZTyEQw1-i34C6_s2beFRfV=w1200',
+                title: 'High-Contrast Story Visual (16:9)',
+                meta: '03 / 12 • YouTube Thumbnail'
+            },
+            {
+                src: 'https://lh3.googleusercontent.com/d/1YwW2znUQ5MyxSqwd47niQAzQ4Uj00z9y=w1200',
+                fallback: 'INFO POST.jpg',
+                title: 'Taem — 01 Educational Info Post (1080×1350)',
+                meta: '04 / 12 • Social Media Campaign'
+            },
+            {
+                src: 'https://lh3.googleusercontent.com/d/1hxh5SjJfafXw7fa7UaxJBTyhwaLPnFrH=w1200',
+                fallback: 'Taem product post.jpg',
+                title: 'Taem — 02 Product Spotlight (1080×1350)',
+                meta: '05 / 12 • Social Media Campaign'
+            },
+            {
+                src: 'https://lh3.googleusercontent.com/d/1_B14dS-UEZcHUeYGlURFDhMzDMuELgm8=w1200',
+                fallback: 'Taem special offer post.jpg',
+                title: 'Taem — 03 Special Offer Promo (1080×1350)',
+                meta: '06 / 12 • Social Media Campaign'
+            },
+            {
+                src: 'https://lh3.googleusercontent.com/d/1tJwDdBrY0WBGKOFE0X4lI8l27JQhpwCH=w1600',
+                fallback: 'https://lh3.googleusercontent.com/d/1tJwDdBrY0WBGKOFE0X4lI8l27JQhpwCH=w1200',
+                title: 'Taem Bakery — Pencil Sketch to Final 3-Panel Grid',
+                meta: '07 / 12 • Social Media Campaign'
+            },
+            {
+                src: 'https://lh3.googleusercontent.com/d/16xetqjkj_ye-JscC5URr4ectfg5D5qd3=w1400',
+                fallback: 'Bole buna.jpg',
+                title: 'Bole Buna — Launch Poster',
+                meta: '08 / 12 • Launch Poster'
+            },
+            {
+                src: 'https://lh3.googleusercontent.com/d/1VWI-PTFB_7fzosS9NQoLutKdC6ggHKgy=w1400',
+                fallback: 'https://lh3.googleusercontent.com/d/1VWI-PTFB_7fzosS9NQoLutKdC6ggHKgy=w1200',
+                title: 'Testimonial',
+                meta: '09 / 12'
+            },
+            {
+                src: 'https://lh3.googleusercontent.com/d/1zpRZytNVsMWIRiUxBUgUI04FqoF4cvgE=w1600',
+                fallback: 'https://lh3.googleusercontent.com/d/1zpRZytNVsMWIRiUxBUgUI04FqoF4cvgE=w1200',
+                title: 'Flagship CTR Packaging (16:9)',
+                meta: '10 / 12 • YouTube Thumbnail'
+            },
+            {
+                src: 'https://lh3.googleusercontent.com/d/1yLlP_wmSQXtblbjHDa21l6HP0DJrDY99=w1600',
+                fallback: 'https://lh3.googleusercontent.com/d/1yLlP_wmSQXtblbjHDa21l6HP0DJrDY99=w1200',
+                title: 'Heaven Luxury Beauty Salon — Our Services (1080×1350)',
+                meta: '11 / 12 • Social Media Campaign'
+            },
+            {
+                src: 'https://lh3.googleusercontent.com/d/1iirk1btSeQkFH4YalalaWfxwGK7A22ER=w1600',
+                fallback: 'https://lh3.googleusercontent.com/d/1iirk1btSeQkFH4YalalaWfxwGK7A22ER=w1200',
+                title: 'Heaven Luxury Beauty Salon — 20% Off Weekend Promo (1080×1350)',
+                meta: '12 / 12 • Social Media Campaign'
+            }
+        ];
+
+        let currentLightboxIndex = 0;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxMeta = document.getElementById('lightbox-meta');
+
+        function renderLightboxItem(index) {
+            currentLightboxIndex = (index + portfolioItems.length) % portfolioItems.length;
+            const item = portfolioItems[currentLightboxIndex];
+            lightboxImg.onerror = function () {
+                this.onerror = null;
+                this.src = item.fallback;
+            };
+            lightboxImg.src = item.src;
+            lightboxTitle.textContent = item.title;
+            lightboxMeta.textContent = item.meta;
+        }
+
+        function openLightboxByIndex(index) {
+            renderLightboxItem(index);
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function navigateLightbox(step) {
+            renderLightboxItem(currentLightboxIndex + step);
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        });
+
+        let showingSketchHero = false;
+        function swapHeroSketch(event) {
+            if (event) event.stopPropagation();
+            const heroImg = document.getElementById('yt-hero-img');
+            const pipImg = document.getElementById('yt-pip-img');
+            const heroBadge = document.getElementById('yt-hero-badge');
+            const pipLabel = document.getElementById('yt-pip-label');
+
+            const finalSrc = 'https://lh3.googleusercontent.com/d/1zpRZytNVsMWIRiUxBUgUI04FqoF4cvgE=w1600';
+            const sketchSrc = 'https://lh3.googleusercontent.com/d/1Hy5O5dSxYS-_jNjkmS6LTjdu7HFGVEta=w1600';
+
+            showingSketchHero = !showingSketchHero;
+            if (showingSketchHero) {
+                heroImg.src = sketchSrc;
+                pipImg.src = finalSrc;
+                heroBadge.textContent = 'CONCEPT SKETCH • WIREFRAME';
+                pipLabel.textContent = 'Final Design';
+            } else {
+                heroImg.src = finalSrc;
+                pipImg.src = sketchSrc;
+                heroBadge.textContent = 'FINAL DESIGN • 16:9';
+                pipLabel.textContent = 'Concept Sketch';
+            }
+        }
+    </script>
+</body>
+</html>
